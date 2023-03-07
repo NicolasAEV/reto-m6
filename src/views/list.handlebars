@@ -1,0 +1,23 @@
+<div class="container">
+    <form action="/list" method="post">
+        <div class="card mt-1">
+            <button type="submit" class="btn btn-success">crear carton</button>
+        </div>
+    </form>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+        {{#each carton}}
+        <div class="col">
+            <div class="card shadow-lg">
+                <h5 class="card-title text-center">ID : {{this.id}}</h5>
+                <hr>
+                <div class="row row-cols-md-1">
+                    <div class="col">
+                        <p class="fs-4 text-center "> {{ this.numeros}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
